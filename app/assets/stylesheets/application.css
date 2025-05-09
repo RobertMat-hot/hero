@@ -9,5 +9,13 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
-
-
+body {
+  background-color: #bd2a2a;
+}
+.navbar {
+  background-color: #3498db;  
+  color: white;
+}
+.home-index {
+  background-color: #5e044a; 
+}
