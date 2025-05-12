@@ -126,6 +126,9 @@ GEM
     google-protobuf (4.30.2-x64-mingw-ucrt)
       bigdecimal
       rake (>= 13)
+    google-protobuf (4.30.2-x86_64-linux)
+      bigdecimal
+      rake (>= 13)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
     importmap-rails (2.1.0)
@@ -191,6 +194,8 @@ GEM
       racc (~> 1.4)
     nokogiri (1.18.8-x64-mingw-ucrt)
       racc (~> 1.4)
+    nokogiri (1.18.8-x86_64-linux-gnu)
+      racc (~> 1.4)
     ostruct (0.6.1)
     parallel (1.27.0)
     parser (3.3.8.0)
@@ -206,7 +211,7 @@ GEM
       activesupport (>= 7.0.0)
       rack
       railties (>= 7.0.0)
-    psych (5.2.4)
+    psych (5.2.5)
       date
       stringio
     public_suffix (6.0.2)
@@ -293,6 +298,8 @@ GEM
       google-protobuf (~> 4.30)
     sass-embedded (1.87.0-x64-mingw-ucrt)
       google-protobuf (~> 4.30)
+    sass-embedded (1.87.0-x86_64-linux-gnu)
+      google-protobuf (~> 4.30)
     sassc-embedded (1.80.4)
       sass-embedded (~> 1.80)
     securerandom (0.4.1)
@@ -302,7 +309,7 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
-    solid_cable (3.0.7)
+    solid_cable (3.0.8)
       actioncable (>= 7.2)
       activejob (>= 7.2)
       activerecord (>= 7.2)
@@ -328,6 +335,7 @@ GEM
       sprockets (>= 3.0.0)
     sqlite3 (2.6.0-arm64-darwin)
     sqlite3 (2.6.0-x64-mingw-ucrt)
+    sqlite3 (2.6.0-x86_64-linux-gnu)
     sshkit (1.24.0)
       base64
       logger
@@ -372,6 +380,7 @@ GEM
 PLATFORMS
   arm64-darwin-24
   x64-mingw-ucrt
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap
