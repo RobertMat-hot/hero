@@ -1,2 +1,17 @@
-<h1>TEAM#index</h1>
-<p>this is the team page</p>
+
+<div class="card">
+    <div class="card-header">
+     <h2> <% if @team_number > 0 %> Here is your team! <% else %>  how many team meber do you want? <% end %></h2>
+    </div>
+    <div class="card-body">
+    <div class="row">
+           
+        <% if @team_number > 0 %>
+            <%= render 'home/show_team' %>
+        <% else %>
+            <%= render 'home/create_team' %>
+        <% end %>
+        
+    </div>
+    </div>
+</div>
