@@ -18,10 +18,8 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 gem 'bootstrap', '~> 5.3.3'
-gem 'dartsass-sprockets'
-gem 'sprockets', '~> 4.0'
-gem 'sprockets-rails', '~> 3.2'
-gem 'jquery-rails'
+gem 'dartsass-rails'
+gem 'faker'
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"

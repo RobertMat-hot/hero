@@ -1,4 +1,25 @@
-<body class="home-index">
-<h1>Home</h1>
-<p>this is my home page!</p>
-<body>
+<div class="card">
+    <div class="card-header">
+        <%= link_to 'generate another hero', root_path, class: "btn btn-outline-secondary"%>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-4">
+            <h1>Your Superhero!</h1>
+            <img src="<%= @avatar %>">
+            <br/><br/>
+            </div>
+            <div class="col-md-4">
+            <p class="test">your details:</p>
+                <h3>Superhero name:<br/> 
+                <span class="red"><%= @name %></span>
+            </h3> 
+                <h3>Superhero power:<br/>
+                <span class="red"><%= @power %></span>
+            </h3> 
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+    </div>
+</div>
