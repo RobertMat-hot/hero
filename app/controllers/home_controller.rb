@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  before_action :common, :only => [:index, :team]
+  before_action :common, :only => [:index, :team, :custom]
 
   def common
     @name = Faker::Superhero.name
@@ -29,5 +29,8 @@ class HomeController < ApplicationController
   end
 
   def custom
+    @hero_name = params[:heroname]
+    @superpower = params[:superpower]
+    @vary = params[:vary].to_i
   end
 end

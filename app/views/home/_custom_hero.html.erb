@@ -1,0 +1,37 @@
+<div class="card">
+<div class="card-body">
+        <div class="row">
+            <div class="col-md-4">
+
+            <% rand_num = rand(1..1000) %>
+
+            <% if @vary == 1 %>
+                <% set = "set1" %>
+            <% elsif @vary == 2 %>
+                <% set = "set2" %>
+            <% elsif @vary == 3 %>
+                <% set = "set3" %>
+            <% elsif @vary == 4 %>
+                <% set = "set4" %>
+            <% end %>
+
+             <% avatar = Faker::Avatar.image(slug: rand_num, size: "300x300", format: "png", set: set, bgset: "bg1") %>
+
+            <h1>Your Superhero!</h1>
+            <img src="<%= avatar %>">
+            <br/><br/>
+            </div>
+            <div class="col-md-4">
+            <p class="test">your details:</p>
+                <h3>Superhero name:<br/> 
+                <span class="red"><%= @hero_name %></span>
+            </h3> 
+                <h3>Superhero power:<br/>
+                <span class="red"><%= @superpower %></span>
+            </h3> 
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+    </div>
+</div>

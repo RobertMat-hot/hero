@@ -1,0 +1,31 @@
+<div class="card">
+  <div class="card-body">
+    <% if @hero_name.present? %>
+      <%= render 'home/custom_hero' %>
+    <% else %>
+      <%= form_tag home_custom_path, method: :post do %>
+        <div class="mb-3">
+          <label for="heroname" class="form-label">Your hero's name</label>
+          <input type="text" name="heroname" class="form-control" id="heroname">
+        </div>
+
+        <div class="mb-3">
+          <label for="superpower" class="form-label">Your super power</label>
+          <input type="text" name="superpower" class="form-control" id="superpower">
+        </div>
+
+        <div class="mb-3">
+        <label for="vary" class="form-label">what type of hero do you want? </label>
+        <%= select_tag :vary, options_for_select([
+                            ['robot', 1],
+                            ['alien', 2],
+                            ['robot-head', 3],
+                            ['kitty', 4],
+                            ]), class: 'form-control' %>
+                
+        </div>
+        <%= submit_tag 'Create your hero!', class: "btn btn-primary" %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
