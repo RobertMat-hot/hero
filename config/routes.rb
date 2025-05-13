@@ -1,10 +1,22 @@
 Rails.application.routes.draw do
+  resources :home, only: [:index, :create, :show, :destroy] do
+    collection do
+       get 'all_hero'
+       get 'team'
+       get 'custom'
+       post 'create_multiple'
+     end
+  end
   root 'home#index'
   #get "home/index"
+  get "home/create"
   get "home/team"
   get "home/custom"
+  get "home/all_hero"
   post "home/team" => 'home#team'
   post "home/custom" => 'home#custom'
+  post "home/index" => 'home#index'
+  post "home/create" => 'home#create'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

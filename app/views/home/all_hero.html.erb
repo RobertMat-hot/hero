@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>All Superheroes</h1>
+  <div class="row">
+    <% if @superheroes.present? %>
+      <% @superheroes.each do |superhero| %>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h3>Superhero name:<br/>
+                <span class="red"><%= superhero.name %></span>
+              </h3>
+              <h3>Superhero power:<br/>
+                <span class="red"><%= superhero.power %></span>
+              </h3>
+              <img src="<%= superhero.avatar %>">
+              <br/><br/>
+              <%= button_to 'Delete', home_path(superhero), method: :delete, class: "btn btn-danger" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% else %>
+      <p>No superheroes found.</p>
+    <% end %>
+  </div>
+</div>

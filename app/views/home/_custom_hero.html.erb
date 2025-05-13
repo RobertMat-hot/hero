@@ -15,10 +15,10 @@
                 <% set = "set4" %>
             <% end %>
 
-             <% avatar = Faker::Avatar.image(slug: rand_num, size: "300x300", format: "png", set: set, bgset: "bg1") %>
+             <% @cavatar = Faker::Avatar.image(slug: rand_num, size: "300x300", format: "png", set: set, bgset: "bg1") %>
 
             <h1>Your Superhero!</h1>
-            <img src="<%= avatar %>">
+            <img src="<%= @cavatar %>">
             <br/><br/>
             </div>
             <div class="col-md-4">
@@ -29,6 +29,12 @@
                 <h3>Superhero power:<br/>
                 <span class="red"><%= @superpower %></span>
             </h3> 
+            <%= form_tag home_create_path, method: 'POST' do %>
+            <%= hidden_field_tag :name, @hero_name %>
+            <%= hidden_field_tag :power, @superpower %>
+            <%= hidden_field_tag :avatar, @cavatar %>
+            <%= submit_tag 'Save this hero', class: "btn btn-dark" %>
+            <% end %>
             </div>
             <div class="col-md-4">
             </div>

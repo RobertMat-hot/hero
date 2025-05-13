@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-expand-lg navbar-light shadow">
+<nav class="navbar navbar-expand-lg navbar-light shadow navbar_bg">
     <a class="navbar-brand" href="#">The Page</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -10,10 +10,13 @@
           <%= link_to 'Home Page', root_path, class: 'btn btn-danger' %>
         </li>
         <li class="nav-item">
-          <%= link_to 'create a Team', home_team_path, class: 'btn btn-success' %>
+          <%= link_to 'Show the Team', home_team_path, class: 'btn btn-success' %>
         </li>
         <li class="nav-item">
-          <%= link_to 'create your own hero', home_custom_path, class: 'btn btn-info' %>
+          <%= link_to 'create a custom hero', home_custom_path, class: 'btn btn-info' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'show all saved', home_all_hero_path, class: 'btn btn-dark' %>
         </li>
       </ul>
     </div>

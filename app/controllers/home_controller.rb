@@ -21,7 +21,7 @@ class HomeController < ApplicationController
   end
 
   def index
-   
+    @superhero = Superhero.all
   end
 
   def team
@@ -33,4 +33,39 @@ class HomeController < ApplicationController
     @superpower = params[:superpower]
     @vary = params[:vary].to_i
   end
+
+def create
+   @superhero = Superhero.new(superhero_params)
+  
+     if @superhero.save
+       render :_saved
+     else
+     render :index
+     end
+    end
+  
+    def show
+      @superhero = Superhero.find(params[:id])
+    end
+  
+
+def all_hero
+     @superheroes = Superhero.all
+  end
+
+
+
+def destroy
+     @superhero = Superhero.find(params[:id])
+     @superhero.destroy
+     redirect_to home_all_hero_path
+    end
+  
+  
+   private
+  
+    def superhero_params
+     params.permit(:name, :power, :avatar)
+    end
+  
 end
